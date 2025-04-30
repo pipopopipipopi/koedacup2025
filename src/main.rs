@@ -1,8 +1,11 @@
-use std::env;
+jse std::env;
 use std::error::Error;
 
 mod files;
 use crate::files::read_data;
+
+mod lsm;
+use crate::lsm::solve;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
